@@ -4,53 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style media="screen">
+    body{
+      font-family: sans-serif;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    /* Header */
+    #header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        background-color: rgb(236, 236, 236);
+    }
+    #header #nav-bar{
+      margin-left: auto;
+    }
+    #header #nav-bar .nav-link{
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #000
+    }
+
+    /* Form container */
+    #form-container{
+      padding: 20px 0
+    }
+    #form{
+      text-align: center;
+    }
+    #form input[type='email']{
+      width: 70%;
+      padding: 10px 15px;
+      font-size: 18px;
+      border-radius: 4px;
+      border: 1px solid #eee
+    }
+    #form input[type='submit']{
+      padding: 10px 15px;
+      background: dodgerblue;
+      border-radius: 4px;
+      font-size: 18px;
+      color: #fff;
+      border: none
+    }
+
+    /* Video container */
+    #video-container{
+      text-align: center;
+    }
+
+    .wrapper{
+        margin:auto;
+        margin-top: 120px !important;
+        margin-bottom: 120px !important;
+        padding:20px;
+        width:50%
+    }
+
+
+    /* Pricing */
+    #pricing-container{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #pricing-title{
+      text-align: center;
+      display: block;
+      padding-top: 30px;
+      margin-bottom: 3px;
+      color: rgb(110, 106, 106)
+    }
+
+    #pricing-container .price-card{
+      display: inline-flex;
+      border: 2px solid #000;
+      width: 33.33%;
+      margin-right: 3px;
+      margin-left: 3px;
+      flex-direction: column;
+      text-align: center;
+      padding: 10px 20px
+    }
+    #pricing-container .select-price{
+      padding: 10px 15px;
+      background-color: dodgerblue;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 3px
+    }
+
+    @media (min-width: 768px){
+      #header-img{
+        height: 100px
+      }
+    }
+
+    </style>
   </head>
 
   <body>
     <header id="header">
       <img src="https://images.freecreatives.com/wp-content/uploads/2015/04/logo033.png" height="120" id="header-img" alt="Logo">
-        <nav id="nav-bar">
-        <ul>
+      <nav id="nav-bar">
+        <a href="#form-container" class="nav-link">Features</a>
+        <a href="#video-container" class="nav-link">How it works</a>
+        <a href="#pricing-container" class="nav-link">pricing</a>
+
+
+        <!-- <ul>
           <li><a href="#form-container" class="nav-link">Features</a></li>
           <li><a href="#video-container" class="nav-link">How it works</a></li>
           <li><a href="#pricing-container" class="nav-link">pricing</a></li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
-<div class="wrapper">
-    <!-- Form -->
-    <div class="container" id="form-container">
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-        <input type="submit" id="submit" value="Submit">
-      </form>
-    </div>
 
-    <!-- Video container -->
-    <div class="container" id="video-container">
-      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0Wf9bRXUe8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 
-    <!-- Pricing -->
-    <div class="container" id="pricing-container">
-      <div>
-        <h1>Tenor Trombone</h1>
-        <h3>$600</h3>
-        <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+
+    <div class="wrapper">
+      <!-- Form -->
+      <div class="container" id="form-container">
+        <h2 style="text-align: center">Subscribe</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          <input type="submit" id="submit" value="Submit">
+        </form>
       </div>
-      <div>
-        <h1>Tenor Trombone</h1>
-        <h3>$600</h3>
-        <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+
+      <!-- Video container -->
+      <div class="container" id="video-container">
+        <h2 style="text-align: center">Watch our intro video</h2>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0Wf9bRXUe8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div>
-        <h1>Tenor Trombone</h1>
-        <h3>$600</h3>
-        <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+
+      <!-- Pricing -->
+      <!-- <div class="container" id="pricing-container">
+        <div>
+          <h1>Tenor Trombone</h1>
+          <h3>$600</h3>
+          <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+        </div>
+        <div>
+          <h1>Tenor Trombone</h1>
+          <h3>$600</h3>
+          <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+        </div>
+        <div>
+          <h1>Tenor Trombone</h1>
+          <h3>$600</h3>
+          <input style="background-color: yellow; padding: 5px 15px;" type="submit" value="Buy">
+        </div>
+      </div>
+ -->
+
+
+      <h2 id="pricing-title">Pricing List</h2>
+      <div id="pricing-container">
+
+        <!-- Price 1 -->
+        <div class="price-card">
+          <h1>XBox</h1>
+          <p>$1,200</p>
+          <br>
+          <p>
+            Lorem ipsum.<br>
+            Lorem ipsum.<br>
+            Lorem ipsum dolor.<br>
+            Lorem ipsum.
+          </p>
+          <br>
+
+          <a href="#" class="select-price">Select</a>
+        </div>
+
+        <!-- Price 2 -->
+        <div class="price-card">
+          <h1>PS4</h1>
+          <p>$134</p>
+          <br>
+          <p>
+            Lorem ipsum.<br>
+            Lorem ipsum.<br>
+            Lorem ipsum dolor.<br>
+            Lorem ipsum.
+          </p>
+          <br>
+
+          <a href="#" class="select-price">Select</a>
+        </div>
+
+        <!-- Price 2 -->
+        <div class="price-card">
+          <h1>Nintendo</h1>
+          <p>$2,300</p>
+          <br>
+          <p>
+            Lorem ipsum.<br>
+            Lorem ipsum.<br>
+            Lorem ipsum dolor.<br>
+            Lorem ipsum.
+          </p>
+          <br>
+
+          <a href="#" class="select-price">Select</a>
+        </div>
       </div>
     </div>
-  </div>
 
 
 

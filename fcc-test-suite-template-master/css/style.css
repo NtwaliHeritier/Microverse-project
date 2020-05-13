@@ -1,31 +1,105 @@
+body{
+  font-family: sans-serif;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
+/* Header */
 #header{
     position: fixed;
-    top: 0
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgb(236, 236, 236);
+}
+#header #nav-bar{
+  margin-left: auto;
+}
+#header #nav-bar .nav-link{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000
 }
 
-#pricing-container{
-    direction: flex;
-    flex-direction: row;
+/* Form container */
+#form-container{
+  padding: 20px 0
+}
+#form{
+  text-align: center;
+}
+#form input[type='email']{
+  width: 70%;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid #eee
+}
+#form input[type='submit']{
+  padding: 10px 15px;
+  background: dodgerblue;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #fff;
+  border: none
 }
 
-#pricing-container div{
-    border: 1px solid black;
-    padding:20px;
-    margin: 20px;
-    text-align: center;
+/* Video container */
+#video-container{
+  text-align: center;
 }
 
 .wrapper{
     margin:auto;
+    margin-top: 120px !important;
+    margin-bottom: 120px !important;
     padding:20px;
     width:50%
 }
+
+
+/* Pricing */
+#pricing-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+#pricing-title{
+  text-align: center;
+  display: block;
+  padding-top: 30px;
+  margin-bottom: 3px;
+  color: rgb(110, 106, 106)
+}
+
+#pricing-container .price-card{
+  display: inline-flex;
+  border: 2px solid #000;
+  width: 33.33%;
+  margin-right: 3px;
+  margin-left: 3px;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 20px
+}
+#pricing-container .select-price{
+  padding: 10px 15px;
+  background-color: dodgerblue;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px
+}
+
+
+
+
+
 
 @media (min-width: 768px){
   #header-img{
