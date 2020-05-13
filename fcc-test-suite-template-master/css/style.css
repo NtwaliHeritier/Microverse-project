@@ -9,12 +9,25 @@
     top: 0
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
+#pricing-container{
+    direction: flex;
+    flex-direction: row;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
+#pricing-container div{
+    border: 1px solid black;
+    padding:20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.wrapper{
+    margin:auto;
+    padding:20px;
+    width:50%
+}
+
+@media (min-width: 768px){
   #header-img{
     height: 100px
   }
