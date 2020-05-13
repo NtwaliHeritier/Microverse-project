@@ -2,40 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Fork Me! FCC: Test Suite Template</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <!-- <h1>Hello World, we are software developers!</h1> -->
     <header id="header">
-      <img src="images/logo.png" height="120" id="header-img" alt="Logo">
+      <img src="https://images.freecreatives.com/wp-content/uploads/2015/04/logo033.png" height="120" id="header-img" alt="Logo">
       <nav id="nav-bar">
         <ul>
-          <li class="nav-link"><a href="#">Features</a></li>
-          <li class="nav-link"><a href="#">How it works</a></li>
-          <li class="nav-link"><a href="#">pricing</a></li>
+          <li><a href="#form-container" class="nav-link">Features</a></li>
+          <li><a href="#video-container" class="nav-link">How it works</a></li>
+          <li><a href="#pricing-container" class="nav-link">pricing</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Form -->
-    <div class="container">
+    <div class="container" id="form-container">
       <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input type="email" id="email" name="" placeholder="Enter your email">
-        <button id="submit">Submit</button>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input type="submit" id="submit" value="Submit">
       </form>
     </div>
 
     <!-- Video container -->
-    <div class="container">
+    <div class="container" id="video-container">
       <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0Wf9bRXUe8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Pricing -->
+    <div class="container" id="pricing-container">
+
     </div>
 
 
 
 
 
+    <!-- <h1>Hello World, we are software developers!</h1> -->
 
 
 
